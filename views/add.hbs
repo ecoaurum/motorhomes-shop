@@ -1,0 +1,37 @@
+<h1>Добавить автодом</h1>
+
+{{#if error}}
+<p class="alert">{{error}}</p>
+{{/if}}
+{{!-- Обработка формы --}}
+<form action="/add" method="post" novalidate>
+    <div class="input-field">
+        <input id="title" name="title" type="text" class="validate" required value="{{data.title}}">
+        <label for="title">Название автомобиля</label>
+        <span class="helper-text" data-error="Введите название"></span>
+    </div>
+
+    {{!-- Цена курса --}}
+    <div class="input-field">
+        <input id="price" name="price" type="number" class="validate" required min="1" value="{{data.price}}">
+        <label for="price">Цена автомобиля</label>
+        <span class="helper-text" data-error="Введите цену"></span>
+    </div>
+
+    {{!-- Изображение/картинка автомобиля --}}
+    <div class="input-field">
+        <input id="img" name="img" type="text" class="validate" required value="{{data.img}}">
+        <label for="img">URL картинки</label>
+        <span class="helper-text" data-error="Введите url картинки"></span>
+    </div>
+
+    {{!-- Описание автомобиля --}}
+    <div class="input-field">
+        <input id="description" name="description" type="text" class="validate" required value="{{data.description}}">
+        <label for="description">Описание автомобиля</label>
+        <span class="helper-text" data-error="Введите описание"></span>
+    </div>
+
+    <button class="btn btn-primary">Добавить автодом</button>
+</form>
+

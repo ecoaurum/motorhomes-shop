@@ -1,0 +1,15 @@
+{{!-- Отдельная страница с автодомом --}}
+
+<div class="motorhome">
+    {{!-- Подключаем меню --}}
+    {{> navbar }}
+    {{!-- Заголовок --}}
+    <h1>{{motorHome.title}}</h1>
+    {{!-- Картинка товара --}}
+    <img src="{{motorHome.img}}" alt="{{motorHome.title}}">
+    {{!-- Цена --}}
+    <p class="price big">{{motorHome.price}}</p>
+    {{!-- Описание --}}
+    <h4 class="text">Описание</h4>
+    <p class="description">{{motorHome.description}}</p>
+</div>

@@ -1,0 +1,42 @@
+<h2>Профиль</h2>
+
+<div class="row">
+    {{!-- Первая колонка  отвечает за фотографию --}}
+    <div class="col s6">
+        {{#if user.avatarUrl}}
+            <img 
+                class="avatar"
+                src="/{{user.avatarUrl}}" 
+                alt="avatar-{{user.name}}"
+            >
+        {{else}}        
+            {{!-- В случае если аватара нет --}}
+            <p>Аватара нет</p>
+        {{/if}}
+
+    </div>
+    {{!-- Вторая колонка - обработка формы и вывод данных--}}
+    <div class="col s6">
+        <form action="/profile" method="post" enctype="multipart/form-data">
+            <p>Ваш email: <strong>{{user.email}}</strong></p>
+            <div class="input-field">
+                <input id="name" name="name" type="text" class="validate" required value="{{user.name}}">
+                <label for="name">Ваше имя: </label>
+                <span class="helper-text" data-error="Имя не может быть пустым"></span>
+            </div>
+
+            {{!-- File Input - загрузка файлов --}}
+            <div class="file-field input-field">
+                <div class="btn">
+                    <span>Аватар</span>
+                    <input type="file" name="avatar" aria-label="ava">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text" aria-label="ava">
+                </div>
+            </div>
+
+            <button type="submit" class="btn">Применить</button>
+        </form>
+    </div>
+</div>

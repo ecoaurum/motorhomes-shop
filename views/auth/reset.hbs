@@ -1,0 +1,23 @@
+{{!-- Страница сброса пароля --}}
+
+<div class="row">
+    {{!-- Форма для логина --}}
+    <div  class="col s6 offset-s3">
+        {{!-- Выводим сообщение об ошибке --}}
+        {{#if error}}
+            <p class="alert">{{error}}</p>
+        {{/if}}
+        <h2>Забыли пароль?</h2>
+        {{!-- Обработка формы --}}
+        <form action="/auth/reset" method="post">
+            <div class="input-field">
+                <input id="email" name="email" type="email" class="validate" required>
+                <label for="email">Email</label>
+                <span class="helper-text" data-error="Введите email"></span>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Сбросить</button>
+        </form>
+    </div>
+</div>
+

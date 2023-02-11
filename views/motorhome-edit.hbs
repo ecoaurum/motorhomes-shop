@@ -1,0 +1,36 @@
+<h1>Редактировать {{motorHome.title}}</h1>
+
+{{!-- Редактирование товара - Обработка формы --}}
+<form action="/motorhomes/edit" method="post" class="motorhome-form">
+    <div class="input-field">
+        <input id="title" name="title" type="text" class="validate" required value="{{motorHome.title}}">
+        <label for="title">Название автомобиля</label>
+        <span class="helper-text" data-error="Введите название"></span>
+    </div>
+
+    {{!-- Цена курса --}}
+    <div class="input-field">
+        <input id="price" name="price" type="number" class="validate" required min="1" value="{{motorHome.price}}">
+        <label for="price">Цена автомобиля</label>
+        <span class="helper-text" data-error="Введите цену"></span>
+    </div>
+
+    {{!-- Изображение/картинка автомобиля --}}
+    <div class="input-field">
+        <input id="img" name="img" type="text" class="validate" required value="{{motorHome.img}}">
+        <label for="img">URL картинки</label>
+        <span class="helper-text" data-error="Введите url картинки"></span>
+    </div>
+
+
+    <input type="hidden" name="id" value="{{motorHome.id}}">
+
+    <button type="submit" class="btn btn-primary">Редактировать пост</button>
+</form>
+
+{{!-- Удаление --}}
+<form action="/motorhomes/remove" method="post">
+    <input type="hidden" name="id" value="{{motorHome.id}}">
+    <button class="btn red">Удалить пост</button>
+</form>
+

@@ -1,0 +1,35 @@
+<h1>Мои заказы</h1>
+{{!-- Страница заказов --}}
+{{#if orders.length}}
+    {{#each orders}}
+        <div class="row">
+            <div class="col s6 offset-s3">
+                <div class="card">
+                    <div class="card-content">
+                        {{!-- Формируем вывод данных карточки заказов --}}
+                        <span class="card-title">
+                            Заказ <small>{{_id}}</small>
+                        </span>
+                        <p class="date">{{date}}</p>
+                        {{!-- Имя и email пользователя  --}}
+                        <p><em>{{user.userId.name}}</em> {{user.userId.email}}</p>
+                        {{!-- Список заказов/товаров --}}
+                        <ol>
+                            {{#each motorHomes}}
+                            <li>
+                                {{motorHome.title}} (<strong>{{count}}</strong>)
+                            </li>
+                            {{/each}}
+                        </ol>
+                        <hr>
+                        {{!-- Цена всего заказа --}}
+                        <p>Цена: <span class="price">{{price}}</span></p>
+                
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+{{else}}
+    <p>Заказов пока нет</p>
+{{/if}}

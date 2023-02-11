@@ -1,0 +1,87 @@
+.nav-wrapper {
+    padding: 0 2rem;
+}
+
+/* Цена */
+.price {
+    font-size: 2rem;
+}
+
+/* Автодом */
+.motorhome {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Тэг h1 */
+.motorhome h1 {
+    margin-bottom: 2rem;
+}
+
+/* Картинка */
+.motorhome img {
+    max-width: 600px;
+    height: auto;
+}
+
+/* Отступ футера сверху */
+.page-footer {
+    margin-top: 2rem;
+}
+
+/* Прижимает футер к низу */
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+/* Цена на отдельной странице с автодомом */
+.motorhome .price.big {
+    font-size: 2.5rem;
+}
+
+/* Описание при добавлении товара */
+.motorhome .description {
+    max-width: 600px;
+    height: auto;
+}
+
+.motorhome .text {
+    text-align: center;
+}
+
+/* Для того, чтобы каждая ссылка в карточке имела одинаковое расстояние друг от друга */
+.card-action.actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.motorhome-form {
+    margin-bottom: 2rem;
+}
+
+.auth {
+    padding-top: 1rem;
+}
+
+.alert {
+    padding:  .5rem 1rem;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 1rem;
+    background: rgba(255, 0, 0, .3);
+    color: red;
+}
+
+.avatar {
+    max-width: 300px;
+    height: auto;
+}

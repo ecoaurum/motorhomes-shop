@@ -1,0 +1,58 @@
+<nav>
+    <div class="nav-wrapper light-blue darken-4">
+      <a href="/" class="brand-logo">Дома на колесах</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        {{!-- Подсвечивание активной ссылки при нахождении на странице через {{#if else}}--}}
+        {{#if isHome}} 
+        <li class="active"><a href="/">Главная</a></li>
+        {{else}}
+        <li><a href="/">Главная</a></li>
+        {{/if}}
+
+        {{#if isMotorHomes}}
+        <li class="active"><a href="/motorhomes">Автодома</a></li>
+        {{else}}
+        <li><a href="/motorhomes">Автодома</a></li>
+        {{/if}}
+
+        {{!-- Скрываем страницы, если авторизации еще нет --}}
+        {{#if isAuth}}
+        {{!-- Если авторизирован --}}
+          {{#if isAdd}}
+          <li class="active"><a href="/add">Добавить автодом</a></li>
+          {{else}}
+          <li><a href="/add">Добавить автодом</a></li>
+          {{/if}}
+
+          {{#if isProfile}}
+          <li class="active"><a href="/profile">Профиль</a></li>
+          {{else}}
+          <li><a href="/profile">Профиль</a></li>
+          {{/if}}
+
+          {{#if isCard}}
+          <li class="active"><a href="/card">Корзина</a></li>
+          {{else}}
+          <li><a href="/card">Корзина</a></li>
+          {{/if}}
+
+          {{#if isOrder}}
+          <li class="active"><a href="/orders">Заказы</a></li>
+          {{else}}
+          <li><a href="/orders">Заказы</a></li>
+          {{/if}}
+
+          {{!-- Кнопка выход из системы - logout --}}
+          <li><a href="/auth/logout">Выйти</a></li>
+          
+        {{else}}
+          {{!-- Если авторизации нет --}}
+          {{#if isLogin}}
+          <li class="active"><a href="/auth/login#login">Войти</a></li>
+          {{else}}
+          <li><a href="/auth/login#login">Войти</a></li>
+          {{/if}}
+        {{/if}}
+      </ul>
+    </div>
+</nav>
