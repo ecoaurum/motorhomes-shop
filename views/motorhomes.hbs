@@ -1,8 +1,9 @@
-<h1>Дома на колесах</h1>
+<h2>Дома на колесах</h2>
 
 {{!-- Для начала необходимо проверить, есть ли какие то автодома. Если нет - то тогда ничего не выводить --}}
 {{#if motorHomes.length}}
 {{#each motorHomes}}
+ 
 <div class="row">
     <div class="col s6 offset-s3">
       <div class="card">
@@ -14,7 +15,9 @@
           <p class="price">{{price}}</p>
         </div>
         <div class="card-action actions">
-          <a href="/motorhomes/{{id}}" target="_blank">Посмотреть</a>
+          <a href="/motorhomes/{{id}}" target="_blank">Подробнее</a>
+
+
 
           {{#if @root.isAuth}}
 

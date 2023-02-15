@@ -7,9 +7,10 @@ module.exports = function(email) {
         subject: 'Аккаунт  создан',
         html: `
             <h1>Добро пожаловать в наш магазин</h1>
+            <hr>
             <p>Вы успешно создали аккаунт с email - ${email}</p>
             <hr />
-            <a href="${keys.BASE_URL}">Магазин курсов - Главная</a>
+            <a href="https://motorhomes-nodejs.onrender.com/">Магазин автодомов - Главная</a>
 
         `
     }

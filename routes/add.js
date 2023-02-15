@@ -41,7 +41,7 @@ router.post('/', auth, motorHomeValidator, async (req, res) => {
 
     try {
         await motorHome.save();
-        res.redirect('/motorHomes')
+        res.redirect('/motorHomes');
     } catch (err) {
         console.log(err);
     }
